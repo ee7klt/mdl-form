@@ -1,5 +1,6 @@
 var mail = document.getElementById('mail');
-
+var contactform = $("contactform");
+contactform.validate();
 //var msg = document.getElementById('status');
 mail.addEventListener("keyup", function () {
   // Each time the user types something, we check if the
@@ -10,13 +11,13 @@ mail.addEventListener("keyup", function () {
 $(function() {
 
 
-  $('#mail').keyup(function() {
-    window.console.log(mail.validity.valid);
-    if(mail.validity.valid) {
-      $('#next').removeClass("hidden");
+  $('#contactform input').keyup(function() {
+    window.console.log(contactform);
+    if(contactform.valid()) {
+      $('#next').prop('disabled',false);
     }
     else {
-      $('#next').addClass("hidden");
+      $('#next').prop('disabled',true);
     }
   });
 
