@@ -1,0 +1,1 @@
+var mail=document.getElementById("mail");mail.addEventListener("keyup",function(){},!1),$(function(){$("#mail").keyup(function(){window.console.log(mail.validity.valid),mail.validity.valid?$("#next").removeClass("hidden"):$("#next").addClass("hidden")})});
