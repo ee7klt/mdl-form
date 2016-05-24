@@ -41,7 +41,7 @@
 
             <div id="email">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="email" id="mail" required >
+                <input class="mdl-textfield__input" type="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required >
                 <label class="mdl-textfield__label" for="sample2">E-mail</label>
                 <span class="mdl-textfield__error">Enter a valid email!</span>
               </div>
@@ -52,12 +52,6 @@
 
 
 
-        <div class="mdl-card__actions ">
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" disabled id="next">
-            <i class="material-icons">arrow_forward</i>
-          </button>
-
-      </div>
 
 
     </div>
@@ -65,8 +59,101 @@
     <!-- FAB button with ripple -->
     <div>
 
+
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  id="next" disabled>
+                  <i class="material-icons">arrow_forward</i>
+                </button>
+
     </div>
   </div>
+
+
+
+
+    <div id ="mycard2">
+
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Short essay</h2>
+        </div>
+
+
+        <div class="mdl-card__supporting-text">
+          We'd like to learn more about you!
+
+          You can talk about anything (hobbies, favorite drama etc.) and of course your motivation for applying.
+<br />
+          Writing in Korean is optional, but why not use this opportunity to show off your skills!
+          <form action="#"  id="essayform">
+
+            <div class="mdl-textfield mdl-js-textfield" id="essaytext">
+   <textarea class="mdl-textfield__input" type="text" rows= "6" id="essaytext" ></textarea>
+   <label class="mdl-textfield__label" for="sample5">Start here (minimum of 50 words)...</label>
+ </div>
+          </form>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- FAB button with ripple -->
+      <div>
+
+
+                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  id="nextessay" disabled>
+                    <i class="material-icons">arrow_forward</i>
+                  </button>
+
+      </div>
+    </div>
+
+
+    <div id ="mycard3">
+
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Resume upload (optional)</h2>
+        </div>
+
+
+        <div class="mdl-card__supporting-text">
+          We'd like to learn more about you!
+
+          You can talk about anything (hobbies, favorite drama etc.) and of course your motivation for applying.
+<br />
+          Writing in Korean is optional, but why not use this opportunity to show off your skills!
+          <form action="#"  id="essayform">
+
+            <div class="mdl-textfield mdl-js-textfield">
+   <textarea class="mdl-textfield__input" type="text" rows= "6" id="essaytext" ></textarea>
+   <label class="mdl-textfield__label" for="sample5">Start here (minimum of 50 words)...</label>
+ </div>
+          </form>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- FAB button with ripple -->
+      <div>
+
+
+                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  id="nextessay" disabled>
+                    <i class="material-icons">arrow_forward</i>
+                  </button>
+
+      </div>
+    </div>
+
+
   <div id="status">
 
   </div>
