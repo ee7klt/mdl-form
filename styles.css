@@ -65,12 +65,14 @@ opacity: 1;
 
 }
 
-.next:disabled {
-  background-color: #dfdfdf;
+button:disabled {
+  background-color: #ffffff;
 }
 
 
-
+#essay {
+  width: 100%;
+}
 
 
 

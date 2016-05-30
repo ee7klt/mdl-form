@@ -5,7 +5,21 @@ var resumeUpload = document.getElementById('resume-upload');
 var fileInputText = document.getElementById('file_input_text');
 var fileInputTextDiv = document.getElementById('file-input-text-div');
 var nextFile = document.getElementById('nextfile');
+var essayText = document.getElementById('essaytext');
+var nextEssay = document.getElementById('nextessay');
 //var msg = document.getElementById('status');
+
+essayText.addEventListener('keyup', function() {
+  var words = essayText.value.match(/\S+/g).length;
+  window.console.log(words);
+  if (words > 50) {
+    nextEssay.disabled = false;
+  } else {
+    nextEssay.disabled = true;
+  }
+
+})
+
 mail.addEventListener("keyup", function () {
   // Each time the user types something, we check if the
   // email field is valid.
@@ -56,13 +70,6 @@ $(function() {
 
 
   $('#essaytext').keyup(function() {
-    var words = this.value.match(/\S+/g).length;
-    window.console.log(words);
-    if (words > 50) {
-      $('#nextessay').prop('disabled', false);
-    } else {
-      $('#nextessay').prop('disabled', true);
-    }
 
 
   });
