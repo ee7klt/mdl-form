@@ -1,7 +1,7 @@
 .demo-card-wide.mdl-card {
 width: 600px;
 height: 300px;
- //outline: limegreen 10px solid;
+ outline: limegreen 10px solid;
 
 }
 
@@ -43,15 +43,21 @@ top: 6px;
 color: #fff;
 }
 
+#cards {
+  outline: green 15px solid;
+  display: flex;
+  flex-direction: row;
 
+}
 #mycard, #mycard2, #mycard3 {
-height: 600px;
-width:100%;
+height: 400px;
+width: 1000px;
 display:flex;
 flex-direction: row;
-// outline: red solid 10px;
+ outline: red solid 2px;
 justify-content: center;
 align-items: center;
+
 }
 
 
