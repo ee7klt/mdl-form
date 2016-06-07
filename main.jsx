@@ -1,9 +1,7 @@
-
-
-
-
+import Card from './components/Card.jsx';
 
 
 ReactDOM.render(
-  <h1>hello</h1>, document.getElementById('app')
-)
+      <div>hello</div>,
+    document.getElementById('app')
+  );
