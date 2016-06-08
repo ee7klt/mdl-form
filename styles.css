@@ -7,12 +7,14 @@ height: 300px;
 
 #window {
   height: 600px;
-  width:800px;
-  // overflow:auto;
+  width: 800px;
+  outline: 2px solid limegreen;
+//  overflow:hidden;
+
 }
 
 #cards {
-  position: absolute;
+
  display:flex;
  flex-direction: row;
  width: 2400px;
@@ -63,7 +65,7 @@ height: 600px;
 width:800px;
 display:flex;
 flex-direction: row;
- outline: red solid 2px;
+ //outline: red solid 2px;
 justify-content: center;
 align-items: center;
 
@@ -80,9 +82,9 @@ opacity: 1;
 
 }
 
-.mdl-button {
-  background-color: blue;
-  opacity: 1;
+#next:disabled, #nextessay:disabled, #nextfile:disabled {
+  background-color: #dfdfdf;
+
 }
 
 
@@ -120,7 +122,7 @@ input[type="file"] {
 
 
 
-#uploadform {
+#uploadelements {
   display: flex;
   margin-top: 20px;
   height: 100%;

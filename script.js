@@ -1,4 +1,8 @@
 var mail = document.getElementById('mail');
+var mobile = document.getElementById('mobile');
+var first = document.getElementById('first');
+var last = document.getElementById('last');
+var myform = document.getElementById('myform');
 var contactform = document.getElementById('contactform');
 var uploadButton = document.getElementById('resume-upload');
 var resumeUpload = document.getElementById('resume-upload');
@@ -31,7 +35,7 @@ nextEssay.addEventListener('click',function() {
 essayText.addEventListener('keyup', function() {
   var words = essayText.value.match(/\S+/g).length;
   window.console.log(words);
-  if (words > 0) {
+  if (words > 10) {
     nextEssay.disabled = false;
   } else {
     nextEssay.disabled = true;
@@ -75,9 +79,9 @@ resumeUpload.addEventListener('change', function() {
 
 
   contactform.addEventListener('keyup',function() {
-    window.console.log('form valid? ' + contactform.checkValidity());
+    // window.console.log('form valid? ' + myform.checkValidity());
     window.console.log('button disabled?' + nextContact.disabled);
-    if(contactform.checkValidity()) {
+    if(first.validity.valid && last.validity.valid && mobile.validity.valid && mail.validity.valid) {
     nextContact.disabled=false;
     }
     else {
