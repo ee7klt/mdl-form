@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="./styles.css"  >
 </head>
 <body>
+  <div id="window">
 
+
+
+<div id="cards">
   <div id ="mycard">
 
     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
@@ -60,113 +64,109 @@
     <div>
 
 
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored next"  id="next" disabled>
-                  <i class="material-icons">arrow_forward</i>
-                </button>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored next"  id="next" disabled>
+        <i class="material-icons">arrow_forward</i>
+      </button>
+
+    </div>
+  </div>
+
+  <div id ="mycard2">
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Short essay</h2>
+      </div>
+
+
+      <div class="mdl-card__supporting-text">
+        We'd like to learn more about you!
+
+        You can talk about anything (hobbies, favorite drama etc.) and of course your motivation for applying.
+        <br />
+        Writing in Korean is optional, but why not use this opportunity to show off your skills!
+        <form action="#"  id="essayform">
+
+          <div class="mdl-textfield mdl-js-textfield" id="essay">
+            <textarea class="mdl-textfield__input" type="text" rows= "6" id="essaytext" ></textarea>
+            <label class="mdl-textfield__label" for="sample5">Start here (minimum of 50 words)...</label>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+    </div>
+
+    <!-- FAB button with ripple -->
+    <div>
+
+
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored next"  id="nextessay" disabled>
+        <i class="material-icons">arrow_forward</i>
+      </button>
 
     </div>
   </div>
 
 
+  <div id ="mycard3">
 
-
-    <div id ="mycard2">
-
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">Short essay</h2>
-        </div>
-
-
-        <div class="mdl-card__supporting-text">
-          We'd like to learn more about you!
-
-          You can talk about anything (hobbies, favorite drama etc.) and of course your motivation for applying.
-<br />
-          Writing in Korean is optional, but why not use this opportunity to show off your skills!
-          <form action="#"  id="essayform">
-
-            <div class="mdl-textfield mdl-js-textfield" id="essay">
-   <textarea class="mdl-textfield__input" type="text" rows= "6" id="essaytext" ></textarea>
-   <label class="mdl-textfield__label" for="sample5">Start here (minimum of 50 words)...</label>
- </div>
-          </form>
-        </div>
-
-
-
-
-
-
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Resume upload (optional)</h2>
       </div>
 
-      <!-- FAB button with ripple -->
-      <div>
 
-
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored next"  id="nextessay" disabled>
-                    <i class="material-icons">arrow_forward</i>
-                  </button>
-
+      <div class="mdl-card__supporting-text">
+        Please upload your resume in a valid format if you have one handy. Otherwise don't sweat it for now. (You'll need one if you do get invited for an interview though)
       </div>
+
+      <form action="#"  id="uploadform">
+        <div id = 'resume_upload_button'>
+
+
+          <label for="resume-upload" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <i class="material-icons">file_upload</i>
+            <input  class="none" type="file"  id="resume-upload"/>
+          </label>
+        </div>
+        <div class='mdl-textfield mdl-js-textfield' id = 'file-input-text-div'>
+
+
+          <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
+          <label class="mdl-textfield__label" for="file_input_text"></label>
+        </div>
+      </form>
+
+
+
+
+
+
+
     </div>
 
-
-    <div id ="mycard3">
-
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">Resume upload (optional)</h2>
-        </div>
+    <!-- FAB button with ripple -->
+    <div>
 
 
-        <div class="mdl-card__supporting-text">
-Please upload your resume in a valid format if you have one handy. Otherwise don't sweat it for now. (You'll need one if you do get invited for an interview though)
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored next "  id="nextfile" disabled>
+        <i class="material-icons">arrow_forward</i>
+      </button>
+
+    </div>
   </div>
 
-          <form action="#"  id="uploadform">
-            <div id = 'resume_upload_button'>
-
-
-            <label for="resume-upload" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-<i class="material-icons">file_upload</i>
-<input  class="none" type="file"  id="resume-upload"/>
-</label>
 </div>
-<div class='mdl-textfield mdl-js-textfield' id = 'file-input-text-div'>
-
-
-<input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
-     <label class="mdl-textfield__label" for="file_input_text"></label>
 </div>
-          </form>
-
-
-
-
-
-
-
-      </div>
-
-      <!-- FAB button with ripple -->
-      <div>
-
-
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored next"  id="nextfile" disabled>
-                    <i class="material-icons">arrow_forward</i>
-                  </button>
-
-      </div>
-    </div>
-
-
   <div id="status">
 
   </div>
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-  <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
 
   <script src="./script.js"></script>
 </body>

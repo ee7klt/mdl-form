@@ -7,12 +7,31 @@ var fileInputTextDiv = document.getElementById('file-input-text-div');
 var nextFile = document.getElementById('nextfile');
 var essayText = document.getElementById('essaytext');
 var nextEssay = document.getElementById('nextessay');
+var nextContact = document.getElementById('next');
+var nextButton = document.querySelectorAll('.next');
+var cards = document.getElementById('cards');
 //var msg = document.getElementById('status');
+
+
+nextContact.addEventListener('click',function() {
+  window.console.log('nextContact button clicked');
+  cards.style.transform ='translateX('+-800+'px)';
+
+
+});
+
+nextEssay.addEventListener('click',function() {
+  window.console.log('nextEssay button clicked');
+  cards.style.transform ='translateX('+-800*2+'px)';
+
+
+});
+
 
 essayText.addEventListener('keyup', function() {
   var words = essayText.value.match(/\S+/g).length;
   window.console.log(words);
-  if (words > 50) {
+  if (words > 0) {
     nextEssay.disabled = false;
   } else {
     nextEssay.disabled = true;
@@ -21,9 +40,11 @@ essayText.addEventListener('keyup', function() {
 })
 
 mail.addEventListener("keyup", function () {
+// deprecated in favor of 'required' keyword on the field
   // Each time the user types something, we check if the
   // email field is valid.
   //window.console.log('email is valid? ' +mail.validity.valid);
+
 }, false);
 
 resumeUpload.addEventListener('change', function() {
@@ -41,28 +62,29 @@ resumeUpload.addEventListener('change', function() {
   fileInputText.value = (typeof filename === 'undefined') ? '': filename;
   if (fileInputText.value.length != 0) {
     fileInputTextDiv.classList.add('is-focused');
-    nextFile.prop('disabled',false);
+    nextFile.disabled=false;
   } else {
     fileInputTextDiv.classList.remove('is-focused');
-    nextFile.prop('disabled',true);
+    nextFile.disabled=true;
   }
 })
 
 
 
-$(function() {
 
 
-  $('#contactform input').keyup(function() {
-    window.console.log(contactform.checkValidity());
+
+  contactform.addEventListener('keyup',function() {
+    window.console.log('form valid? ' + contactform.checkValidity());
+    window.console.log('button disabled?' + nextContact.disabled);
     if(contactform.checkValidity()) {
-      $('#next').prop('disabled',false);
+    nextContact.disabled=false;
     }
     else {
-      $('#next').prop('disabled',true);
+      nextContact.disabled=true;
     }
   });
-
+/*
   $('#next').click(function() {
     window.console.log('submit button pressed');
     // $('#mycard').hide();
@@ -74,7 +96,4 @@ $(function() {
 
   });
 
-
-
-
-});
+  */
