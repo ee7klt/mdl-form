@@ -14,6 +14,8 @@ var nextEssay = document.getElementById('nextessay');
 var nextContact = document.getElementById('next');
 var nextButton = document.querySelectorAll('.next');
 var cards = document.getElementById('cards');
+var success = document.getElementById('success');
+var successText = document.getElementById('successtext');
 //var msg = document.getElementById('status');
 
 
@@ -30,6 +32,15 @@ nextEssay.addEventListener('click',function() {
 
 
 });
+
+nextFile.addEventListener('click',function() {
+  window.console.log('nextFile button clicked');
+  cards.style.transform ='translateX('+-800*3+'px)';
+  success.classList.add('focused');
+    successText.classList.add('focused');
+
+});
+
 
 
 essayText.addEventListener('keyup', function() {
