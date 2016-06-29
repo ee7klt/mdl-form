@@ -7,11 +7,14 @@
 /* resume upload */
 #uploadelements {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   outline: pink 2px solid;
+  margin-top: 30px;
 }
+
+
 
 input[type="file"] {
   display: none;
@@ -23,6 +26,9 @@ input[type="file"] {
   margin-left: 20px;
 }
 
+#resume > .mdl-card__supporting-text {
+  height: 265px;
+}
 /* end resume upload */
 
 
@@ -34,9 +40,8 @@ input[type="file"] {
   width: 300px;
 }
 
-#resume > .mdl-card__supporting-text {
-  height: 265px;
-}
+
+
 .hidden {
   display:none;
 }
@@ -100,10 +105,13 @@ input[type="file"] {
   #essaytext-expanded {
     display: block;
   }
-
+#uploadelements {
+  flex-direction: row;
+}
 #essaytext {
   display: none;
 }
 
-
+#resume > .mdl-card__supporting-text {
+  height: 155px;
 }
