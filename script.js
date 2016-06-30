@@ -1,70 +1,40 @@
-var mail = document.getElementById('mail');
-var mobile = document.getElementById('mobile');
-var first = document.getElementById('first');
-var last = document.getElementById('last');
-var myform = document.getElementById('myform');
-var contactform = document.getElementById('contactform');
-var uploadButton = document.getElementById('resume-upload');
-var resumeUpload = document.getElementById('resume-upload');
+var email = document.getElementById('email');
+var phone = document.getElementById('phone');
+var first = document.getElementById('firstName');
+var last = document.getElementById('lastName');
+var contact = document.getElementById('contactform');
+var uploadButton = document.getElementById('resume_upload_button');
+var resumeUpload = document.getElementById('resumeupload');
 var fileInputText = document.getElementById('file_input_text');
 var fileInputTextDiv = document.getElementById('file-input-text-div');
-var nextFile = document.getElementById('nextfile');
-var essayText = document.getElementById('essaytext');
-var nextEssay = document.getElementById('nextessay');
-var nextContact = document.getElementById('next');
-var nextButton = document.querySelectorAll('.next');
-var cards = document.getElementById('cards');
-var success = document.getElementById('success');
-var successText = document.getElementById('successtext');
+
 //var msg = document.getElementById('status');
 
 
-nextContact.addEventListener('click',function() {
-  window.console.log('nextContact button clicked');
-  cards.style.transform ='translateX('+-800+'px)';
-
-
-});
-
-nextEssay.addEventListener('click',function() {
-  window.console.log('nextEssay button clicked');
-  cards.style.transform ='translateX('+-800*2+'px)';
-
-
-});
-
-nextFile.addEventListener('click',function() {
-  window.console.log('nextFile button clicked');
-  cards.style.transform ='translateX('+-800*3+'px)';
-  success.classList.add('focused');
-    successText.classList.add('focused');
-
-});
 
 
 
-essayText.addEventListener('keyup', function() {
-  var words = essayText.value.match(/\S+/g).length;
-  window.console.log(words);
-  if (words > 10) {
-    nextEssay.disabled = false;
-  } else {
-    nextEssay.disabled = true;
-  }
 
-})
 
-mail.addEventListener("keyup", function () {
-// deprecated in favor of 'required' keyword on the field
-  // Each time the user types something, we check if the
-  // email field is valid.
-  //window.console.log('email is valid? ' +mail.validity.valid);
 
-}, false);
+//
+// essayText.addEventListener('keyup', function() {
+//   var words = essayText.value.match(/\S+/g).length;
+//   window.console.log(words);
+//   if (words > 10) {
+//     nextEssay.disabled = false;
+//   } else {
+//     nextEssay.disabled = true;
+//   }
+//
+// })
 
+// resumeUpload is a hidden input field
+// 'change' watches for when the filename text appears on this field
 resumeUpload.addEventListener('change', function() {
-  console.log('file input changed');
+  window.console.log('file input changed');
 
+  // extract only the filename (modulo path to it)
   var fullPath = resumeUpload.value;
   if (fullPath) {
     var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
@@ -74,13 +44,19 @@ resumeUpload.addEventListener('change', function() {
     }
 
   }
+
+  // fileInputText: input field styled in MDL fashion
+  // this is NOT hidden and will display the extracted filename from above
+  // if there is a file
+  // otherwise displays ''
   fileInputText.value = (typeof filename === 'undefined') ? '': filename;
+
+  // activate the MDL underline if there is a  valid file in the input field
+  // .is-focused initiates the transition
   if (fileInputText.value.length != 0) {
     fileInputTextDiv.classList.add('is-focused');
-    nextFile.disabled=false;
   } else {
     fileInputTextDiv.classList.remove('is-focused');
-    nextFile.disabled=true;
   }
 })
 
@@ -89,16 +65,16 @@ resumeUpload.addEventListener('change', function() {
 
 
 
-  contactform.addEventListener('keyup',function() {
-    // window.console.log('form valid? ' + myform.checkValidity());
-    window.console.log('button disabled?' + nextContact.disabled);
-    if(first.validity.valid && last.validity.valid && mobile.validity.valid && mail.validity.valid) {
-    nextContact.disabled=false;
-    }
-    else {
-      nextContact.disabled=true;
-    }
-  });
+  // contactform.addEventListener('keyup',function() {
+  //   // window.console.log('form valid? ' + myform.checkValidity());
+  //   window.console.log('button disabled?' + nextContact.disabled);
+  //   if(first.validity.valid && last.validity.valid && mobile.validity.valid && mail.validity.valid) {
+  //   nextContact.disabled=false;
+  //   }
+  //   else {
+  //     nextContact.disabled=true;
+  //   }
+  // });
 /*
   $('#next').click(function() {
     window.console.log('submit button pressed');

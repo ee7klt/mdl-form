@@ -10,13 +10,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  outline: pink 2px solid;
+  //outline: pink 2px solid;
   margin-top: 30px;
 }
 
 
 
-input[type="file"] {
+.none {
   display: none;
 }
 
@@ -26,7 +26,7 @@ input[type="file"] {
   margin-left: 20px;
 }
 
-#resume > .mdl-card__supporting-text {
+ .mdl-card__supporting-text {
   height: 265px;
 }
 /* end resume upload */
@@ -48,7 +48,7 @@ input[type="file"] {
 #scroll {
   height: 400px;
   width: 320px;
-  outline: 4px dotted blue;
+  //outline: 4px dotted blue;
   z-index: 10;
   //overflow: hidden;
 }
@@ -57,7 +57,7 @@ input[type="file"] {
 #container {
   height: 400px;
   width: calc(4*320px);
-  outline: 2px solid limegreen;
+  //outline: 2px solid limegreen;
 
   display: flex;
   flex-direction: row;
@@ -72,7 +72,7 @@ input[type="file"] {
 .demo-card-square > .mdl-card__title {
   color: #fff;
   background: #46B6AC;
-  outline: red solid 2px;
+//  outline: red solid 2px;
 }
 
 
@@ -112,6 +112,7 @@ input[type="file"] {
   display: none;
 }
 
-#resume > .mdl-card__supporting-text {
+/* this makes all cards have uniform content height */
+.mdl-card__supporting-text {
   height: 155px;
 }
