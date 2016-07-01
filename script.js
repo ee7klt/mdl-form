@@ -2,13 +2,49 @@ var email = document.getElementById('email');
 var phone = document.getElementById('phone');
 var first = document.getElementById('firstName');
 var last = document.getElementById('lastName');
-var contact = document.getElementById('contactform');
+var contact = document.getElementById('contact');
 var uploadButton = document.getElementById('resume_upload_button');
 var resumeUpload = document.getElementById('resumeupload');
 var fileInputText = document.getElementById('file_input_text');
 var fileInputTextDiv = document.getElementById('file-input-text-div');
-
+var container = document.getElementById('container');
+var myform = document.getElementById('myform');
 //var msg = document.getElementById('status');
+
+// if screen width is at least 600px, mql.matches is true.
+
+
+// when user first lands, check for width and assigne appropriate Xshift
+var Xshift = setShift();
+
+function setShift()  { // function statements are hoisted
+  var mql = window.matchMedia("screen and (min-width:600px)");
+  if (mql.matches) {
+    console.log('viewport is wider than 600px')
+    return '600px';  // screen is wider than 600px
+  } else {
+    console.log('viewport is narrower than 600px')
+    return '320px';
+  }  // screen is less than 600px width
+}
+
+
+// then if user subsequently resizes browser, change the xshift again
+var mql = window.matchMedia("screen and (min-width:600px)");
+mql.addListener(function(mql) {
+    Xshift = setShift();
+});
+
+var nexts = document.getElementsByClassName('next')
+Array.prototype.forEach.call(nexts, function(element) {
+  element.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('next button clicked')
+    console.log('shifting by '+ Xshift)
+    container.style.opacity = '0.5';
+    container.style.transform = 'translateX('+-Xshift+'px)';
+  })
+})
 
 
 
@@ -64,7 +100,7 @@ resumeUpload.addEventListener('change', function() {
 
 
 
-
+  //
   // contactform.addEventListener('keyup',function() {
   //   // window.console.log('form valid? ' + myform.checkValidity());
   //   window.console.log('button disabled?' + nextContact.disabled);

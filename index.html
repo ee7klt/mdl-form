@@ -8,6 +8,7 @@
 <body>
 
   <div id="scroll">
+    <form id="myform" method="post", enctype="multipart/form-data", action="">
     <div id="container">
       <div class="demo-card-square mdl-card mdl-shadow--2dp" id="contact">
         <div class="mdl-card__title mdl-card--expand">
@@ -15,24 +16,24 @@
         </div>
         <div class="mdl-card__supporting-text">
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="firstName">
+            <input class="mdl-textfield__input" type="text" id="firstName" required>
             <label class="mdl-textfield__label" for="firstName">First Name</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="lastName">
+            <input class="mdl-textfield__input" type="text" id="lastName" required>
             <label class="mdl-textfield__label" for="lastName">Last Name</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="email">
+            <input class="mdl-textfield__input" type="text" id="email" required>
             <label class="mdl-textfield__label" for="email">E-mail</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="phone">
+            <input class="mdl-textfield__input" type="text" id="phone" required>
             <label class="mdl-textfield__label" for="phone">Phone #</label>
           </div>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a class="next mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Next
           </a>
         </div>
@@ -53,7 +54,7 @@
           </div>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a class="next mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Next
           </a>
         </div>
@@ -80,7 +81,7 @@
         </div>
 
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a class="submit mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             submit
           </a>
         </div>
@@ -89,9 +90,8 @@
       <div class="demo-card-square mdl-card mdl-shadow--2dp " id="success">
         <h2>Thanks for your application.</h2>
         <h3>We'll be in touch ASAP!</h3>
-
-
-      </div>
+    </form>
+          </div>
     </div>
   </div>
 
