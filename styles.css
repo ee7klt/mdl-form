@@ -58,7 +58,7 @@
   height: 400px;
   width: calc(4*320px);
   outline: 2px solid limegreen;
-  
+  transition: all .4s ease-in-out;
 
   display: flex;
   flex-direction: row;

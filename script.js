@@ -9,6 +9,10 @@ var fileInputText = document.getElementById('file_input_text');
 var fileInputTextDiv = document.getElementById('file-input-text-div');
 var container = document.getElementById('container');
 var myform = document.getElementById('myform');
+var submit = document.getElementsByClassName('submit')[0];
+var nexts = document.getElementsByClassName('next');
+var count = 0;
+
 //var msg = document.getElementById('status');
 
 // if screen width is at least 600px, mql.matches is true.
@@ -21,10 +25,10 @@ function setShift()  { // function statements are hoisted
   var mql = window.matchMedia("screen and (min-width:600px)");
   if (mql.matches) {
     console.log('viewport is wider than 600px')
-    return '600px';  // screen is wider than 600px
+    return '600';  // screen is wider than 600px
   } else {
     console.log('viewport is narrower than 600px')
-    return '320px';
+    return '320';
   }  // screen is less than 600px width
 }
 
@@ -35,17 +39,17 @@ mql.addListener(function(mql) {
     Xshift = setShift();
 });
 
-var nexts = document.getElementsByClassName('next')
+
 Array.prototype.forEach.call(nexts, function(element) {
-  element.addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log('next button clicked')
-    console.log('shifting by '+ Xshift)
-    container.style.opacity = '0.5';
-    container.style.transform = 'translateX('+-Xshift+'px)';
+  element.addEventListener('click', function(event){
+    container.style.transform = 'translateX('+-Xshift*(++count)+'px)';
   })
 })
 
+submit.addEventListener('click', function() {
+  console.log('submit clicked')
+  myform.submit();
+})
 
 
 
