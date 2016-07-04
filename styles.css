@@ -26,25 +26,20 @@
   margin-left: 20px;
 }
 
- .mdl-card__supporting-text {
+#container .mdl-card__supporting-text {
   height: 265px;
 }
 /* end resume upload */
 
 
-#essaytext-expanded {
+/*#essaytext-expanded {
   display: none;
   width: 550px;
-}
-#essaytext {
-  width: 300px;
-}
+}*/
 
 
 
-.hidden {
-  display:none;
-}
+
 #scroll {
   height: 402px;
   width: 322px;
@@ -65,11 +60,11 @@
 }
 
 
-.demo-card-square.mdl-card {
+#container .demo-card-square.mdl-card {
   width: 320px;
   height: 400px;
 }
-.demo-card-square > .mdl-card__title {
+#container  .demo-card-square > .mdl-card__title {
   color: #fff;
   background: #46B6AC;
 //  outline: red solid 2px;
@@ -77,12 +72,25 @@
 
 
 
-.mdl-card__supporting-text > .mdl-textfield {
+#container  .mdl-card__supporting-text > .mdl-textfield {
   width: 200px;
 
 }
 
-.mdl-card__actions > .mdl-button {
+
+
+#essaytext {
+   width: 300px;
+  // outline: red solid 2px;
+}
+
+#essaytext .mdl-textfield.is-focused {
+  width: 300px;
+}
+
+
+
+#container  .mdl-card__actions > .mdl-button {
   float: right;
 }
 
@@ -92,7 +100,7 @@
     width: calc(4*600px);
   }
 
-  .demo-card-square.mdl-card {
+  #container  .demo-card-square.mdl-card {
     width: 600px;
     height: 300px;
   }
@@ -102,17 +110,30 @@
     width: 602px;
   }
 
-  #essaytext-expanded {
+/* resize essay box */
+
+#essaytext {
+   width: 550px;
+   height: 90px;
+  // outline: red solid 2px;
+}
+
+#essaytext .mdl-textfield.is-focused {
+  width: 550px;
+}
+/* add the large essay box */
+/* this is a problem because the text typed in will not remain when resizing the wiindow */
+  /*#essaytext-expanded {
     display: block;
-  }
+  }*/
+
+
 #uploadelements {
   flex-direction: row;
 }
-#essaytext {
-  display: none;
-}
+
 
 /* this makes all cards have uniform content height */
-.mdl-card__supporting-text {
+#container .mdl-card__supporting-text {
   height: 155px;
 }

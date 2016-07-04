@@ -35,9 +35,10 @@ function setShift()  { // function statements are hoisted
 
 
 // then if user subsequently resizes browser, change the xshift again
-var mql = window.matchMedia("screen and (min-width:600px)");
+var mql = window.matchMedia("screen and (min-width:600px)"); // listen to viewport size change
 mql.addListener(function(mql) {
     Xshift = setShift();
+    container.style.transform = 'translateX('+-Xshift*(count)+'px)';
 });
 
 // listen for click on the next button and shift the card container accordingly
