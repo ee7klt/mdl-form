@@ -13,6 +13,7 @@ var submit = document.getElementsByClassName('submit')[0];
 var nexts = document.getElementsByClassName('next');
 var count = 0;
 
+
 //var msg = document.getElementById('status');
 
 // if screen width is at least 600px, mql.matches is true.
@@ -39,13 +40,17 @@ mql.addListener(function(mql) {
     Xshift = setShift();
 });
 
-
+// listen for click on the next button and shift the card container accordingly
+// more shift is required for further cards
+// var 'count' is used to keep track of which card we're on
 Array.prototype.forEach.call(nexts, function(element) {
   element.addEventListener('click', function(event){
+    container.children[count+1].classList.remove('none');
     container.style.transform = 'translateX('+-Xshift*(++count)+'px)';
   })
 })
 
+// the final button should also submit the form
 submit.addEventListener('click', function() {
   console.log('submit clicked')
   myform.submit();

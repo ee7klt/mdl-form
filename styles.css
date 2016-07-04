@@ -46,18 +46,17 @@
   display:none;
 }
 #scroll {
-  height: 400px;
-  width: 320px;
-  //outline: 4px dotted blue;
-  z-index: 10;
-  //overflow: hidden;
+  height: 402px;
+  width: 322px;
+  //outline: 1px dotted blue;
+  overflow: hidden;
 }
 
 
 #container {
   height: 400px;
   width: calc(4*320px);
-  outline: 2px solid limegreen;
+  //outline: 2px solid limegreen;
   transition: all .4s ease-in-out;
 
   display: flex;
@@ -99,8 +98,8 @@
   }
 
   #scroll {
-    height: 300px;
-    width: 600px;
+    height: 302px;
+    width: 602px;
   }
 
   #essaytext-expanded {
